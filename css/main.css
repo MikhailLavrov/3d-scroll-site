@@ -77,7 +77,6 @@ h1, h2, h3, h4 {
 .frame h2 {
 	text-align: center;
 	font-size: calc(var(--index) * 3.3);
-  width: min-content;
 }
 
 .frame-media {
@@ -103,4 +102,44 @@ h1, h2, h3, h4 {
 video.frame-media {
 	width: calc(var(--index) * var(--side-big));
 	height: calc(var(--index) * var(--side-small));
+}
+
+video.frame-media--right {
+	left: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
+}
+
+video.frame-media--left {
+	right: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
+}
+
+.text-right > * {
+  position: relative;
+  left: 18vw;
+}
+
+.text-left > * {
+  position: relative;
+  right: 18vw;
+}
+
+.frame h3 {
+  font-size: calc(var(--index) * 3);
+}
+
+.frame p {
+  max-width: 30vw;
+  margin-top: 3vh;
+}
+
+.soundbutton {
+	position: fixed;
+	bottom: 5vh;
+	right: 5vw;
+	cursor: pointer;
+	width: 24px;
+	transition: .25s ease;
+}
+
+.soundbutton.paused {
+	opacity: .25;
 }
