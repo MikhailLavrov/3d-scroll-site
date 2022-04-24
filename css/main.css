@@ -51,3 +51,11 @@ body {
   will-change: transform; /*заставляет браузер включить более мощное аппаратное ускорение для оптимизации прокрутки всех фреймов*/
   transform-style: preserve-3d; /*делает края фреймов при переключении не размытыми*/
 }
+h1, h2, h3, h4 {
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.frame h2 {
+  text-align: center;
+  font-size: calc(var(--index) * 3.3);
+}
