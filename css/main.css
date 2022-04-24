@@ -77,6 +77,7 @@ h1, h2, h3, h4 {
 .frame h2 {
 	text-align: center;
 	font-size: calc(var(--index) * 3.3);
+  width: min-content;
 }
 
 .frame-media {
@@ -95,6 +96,11 @@ h1, h2, h3, h4 {
 	left: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
 }
 
-.frame_bg {
+.frame--bg {
 	background-color: rgb(0 0 0 / .87);
+}
+
+video.frame-media {
+	width: calc(var(--index) * var(--side-big));
+	height: calc(var(--index) * var(--side-small));
 }
