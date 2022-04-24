@@ -9,6 +9,7 @@
   --side-small: 26;
   --size-big: 36;
   --depth: 4000px;
+  --transition: .75s cubic-bezier(.075, .5, 0, 1)
 }
 @font-face {
   font-family: raleway_c;
@@ -27,6 +28,7 @@ body {
   font-family: raleway_c, sans-serif;
   line-height: 1.75;
   height: var(--depth);
+  font-weight: 300;
 }
 .container {
   width: 100%;
@@ -45,4 +47,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transition), opacity .75s ease; /*Скорость затухания при переключении */
+  will-change: transform; /*заставляет браузер включить более мощное аппаратное ускорение для оптимизации прокрутки всех фреймов*/
+  transform-style: preserve-3d; /*делает края фреймов при переключении не размытыми*/
 }

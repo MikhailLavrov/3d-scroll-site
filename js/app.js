@@ -15,10 +15,10 @@ window.onscroll = function() {
 
 	frames.forEach(function(n, i) { //n - это текущий обрабатываемый элемент, а i - это индекс его
 		zVals.push((i * zSpacing) + zSpacing)
-		zVals[i] += delta * -5.5
+		zVals[i] += delta * -5.5 //Чем больше тем дольше прокрутка длится
 		let frame = frames[i],
 				transform = `translateZ(${zVals[i]}px)`,
-				opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0 //Чем 
+				opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0 //Чем больше 1.8 тем раньше пропадает
 		frame.setAttribute('style', `transform: ${transform}; opacity: ${opacity}`)
 	})
 
