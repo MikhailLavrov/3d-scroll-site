@@ -7,10 +7,14 @@
 :root {
 	--index: calc(1vw + 1vh);
 	--gutter: 30px;
-	--side-small: 36;
-	--side-big: 46;
-	--depth: 6600px;
-	--transition: .75s cubic-bezier(.075, .5, 0, 1)
+	--depth: 6700px;
+	--transition: .75s cubic-bezier(.075, .5, 0, 1);
+
+	--side-small-1: 35;
+	--side-big-1: 50;
+	
+	--side-small-2: 30;
+	--side-big-2: 40;
 }
 
 /* Скрываем Scrollbar */
@@ -81,40 +85,40 @@ h1, h2, h3, h4 {
 
 .frame-media {
 	position: relative;
-	width: calc(var(--index) * var(--side-small));
-	height: calc(var(--index) * var(--side-big));
+	width: calc(var(--index) * var(--side-small-1));
+	height: calc(var(--index) * var(--side-big-1));
 	background-position: center;
 	background-size: cover;
 }
 
+.hor {
+	width: calc(var(--index) * var(--side-big-1));
+	height: calc(var(--index) * var(--side-small-1));
+}
+
 .frame-media--left {
-	right: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+	right: calc(var(--side-small-1) / 2 * var(--index) + var(--gutter));
 }
 
 .frame-media--right {
-	left: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+	left: calc(var(--side-small-1) / 2 * var(--index) + var(--gutter));
 }
 
 .frame--bg {
 	background-color: rgb(0 0 0 / .87);
 }
 
-.hor.frame-media {
-	width: calc(var(--index) * var(--side-big));
-	height: calc(var(--index) * var(--side-small));
-}
-
 video.frame-media {
-	width: calc(var(--index) * var(--side-big));
-	height: calc(var(--index) * var(--side-small));
+	width: calc(var(--index) * var(--side-big-1));
+	height: calc(var(--index) * var(--side-small-1));
 }
 
 video.frame-media--right {
-	left: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
+	left: calc(var(--side-big-1) / 2 * var(--index) + var(--gutter));
 }
 
 video.frame-media--left {
-	right: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
+	right: calc(var(--side-big-1) / 2 * var(--index) + var(--gutter));
 }
 
 .text-right > * {
@@ -147,4 +151,13 @@ video.frame-media--left {
 
 .soundbutton.paused {
 	opacity: .25;
+}
+
+.frame-media--port {
+	width: 50em;
+	height: 40em;
+	background-size: 80%;
+	background-repeat: no-repeat;
+
+	border: 3px solid #fff;
 }
