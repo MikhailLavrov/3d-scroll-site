@@ -24,7 +24,7 @@ window.onscroll = function() {
 
 }
 
-window.scrollTop(0, 1)
+window.scrollTo(0, 1)
 
 // Audio
 
