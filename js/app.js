@@ -1,7 +1,7 @@
 // 3D Scroll
 
-let zSpacing = -500, //Расстояние по оси Z
-		lastPos = zSpacing / 30, //Стартовая позиция каждого фрейма
+let zSpacing = -600, //Расстояние по оси Z
+		lastPos = zSpacing / 35, //Стартовая позиция каждого фрейма
 		$frames = document.getElementsByClassName('frame'),
 		frames = Array.from($frames), //Массив из всех элементов
 		zVals = []

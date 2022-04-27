@@ -7,7 +7,7 @@
 :root {
 	--index: calc(1vw + 1vh);
 	--gutter: 30px;
-	--depth: 4800px;
+	--depth: 5400px;
 	--transition: .75s cubic-bezier(.075, .5, 0, 1);
 
 	--side-small-1: 35;
@@ -39,7 +39,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-	background-color: #000;
+	background-color: rgb(37, 37, 32);
 	color: #fff;
 	font-size: calc(var(--index) * .8);
 	font-family: raleway_c, sans-serif;
@@ -106,7 +106,8 @@ h1, h2, h3, h4 {
 }
 
 .frame--bg {
-	background-color: rgb(0 0 0 / .87);
+	background-color: rgb(37, 37, 32);
+	/* background-color: rgb(0 0 0 / .87); */
 }
 
 video.frame-media {
